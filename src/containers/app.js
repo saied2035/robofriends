@@ -36,7 +36,7 @@ class  App extends React.Component {
            	  (
                 <Error>
                 <div className="tc" style={{overflow:'hidden'}} >
-                <h1 className="f1 ma2">RoboFriends</h1>
+                <h1 className="f2 ma2">RoboFriends</h1>
                 <SearchBox onSearchChange={this.onSearchChange}/>
                 <Scroll numOfRobots={filteredRobots.length}>
                     
