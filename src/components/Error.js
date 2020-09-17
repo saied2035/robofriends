@@ -8,10 +8,10 @@ class Error extends Component {
 			catch_error : false
 		}
 	}
-	componentDidCatch (Error, info) {
+	componentDidCatch () {
 		this.setState({catch_error : true})
 	}
-	render (props) {
+	render () {
        return this.state.catch_error ? 
        <div style={{height:'100vh'}}className='flex justify-center items-center'><h1>something went wrong.</h1></div> :
        this.props.children
