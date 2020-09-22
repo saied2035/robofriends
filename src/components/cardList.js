@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './card'
 const CardList = ({robots,error}) => {
-	             if(!robots.length) {
+	             if(error.length) {
 	             	return (
                           <div style={{height:'70vh', width : '100%'}}className=' f3 flex justify-center items-center'>
                           <h3>the robots not found for now something went wrong</h3>

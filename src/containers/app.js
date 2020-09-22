@@ -11,7 +11,7 @@ import './app.css';
  const state = (state) => {
   return {
     searchBar :state.searchRobots.searchBar,
-    robots : state.requestRobots.robots ,
+    robots : state.requestRobots.robots,
     isPending : state.requestRobots.isPending ,
     error : state.requestRobots.error
   }
@@ -31,7 +31,7 @@ class  App extends React.Component {
 
            render() {
             
-            const {searchBar,onSearchChange, robots , isPending} = this.props;
+            const {searchBar,onSearchChange, robots , isPending, error} = this.props;
 
            const filteredRobots= robots.filter(robot => {
          	return robot.name.toLowerCase().includes( searchBar.toLowerCase())
@@ -48,7 +48,7 @@ class  App extends React.Component {
                 <h1 className="f2 ma2">RoboFriends</h1>
                 <SearchBox onSearchChange={onSearchChange}/>
                 <Scroll numOfRobots={filteredRobots.length}>
-                    <CardList robots={filteredRobots}/>
+                    <CardList robots={filteredRobots} error={error}/>
                 </Scroll>
                 </div>
                 </Error>

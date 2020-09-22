@@ -1,5 +1,5 @@
 import {
-	CHANGE_SEARCH_BAR,
+	CHANGE_SEARCH_BAR ,
 	REQUEST_ROBOTS_PENDING,
 	REQUEST_ROBOTS_SUCCESS,
 	REQUEST_ROBOTS_FAILED
@@ -11,7 +11,7 @@ export const setSearchBar = (text) => ({
 })
 
 export const requestRobots = () => (request)  => {
-	request({type: REQUEST_ROBOTS_PENDING});
+	request({type: REQUEST_ROBOTS_PENDING , payload : []});
 	fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
     .then(data => request({type: REQUEST_ROBOTS_SUCCESS , payload: data}))
