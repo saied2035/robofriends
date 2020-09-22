@@ -32,7 +32,7 @@ class  App extends React.Component {
            render() {
             
             const {searchBar,onSearchChange, robots , isPending, error} = this.props;
-
+             
            const filteredRobots= robots.filter(robot => {
          	return robot.name.toLowerCase().includes( searchBar.toLowerCase())
                });
